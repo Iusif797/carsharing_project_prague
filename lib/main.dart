@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prague_carsharing/screens/main_screen.dart';
-import 'package:prague_carsharing/screens/bookings_screen.dart';
+import 'package:prague_carsharing/screens/map_screen.dart';
+import 'package:prague_carsharing/screens/booking_screen.dart';
 import 'package:prague_carsharing/theme/app_theme.dart';
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Prague Carsharing',
       theme: AppTheme.lightTheme,
-      initialRoute: '/',
+      home: const MainScreen(),
       routes: {
-        '/': (context) => const MainScreen(),
+        '/map': (context) => const MapScreen(),
         '/bookings': (context) => const BookingsScreen(),
       },
     );
